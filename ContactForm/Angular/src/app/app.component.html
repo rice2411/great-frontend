@@ -1,0 +1,19 @@
+<!-- Ignore the (ngSubmit) binding, it's used by GFE 
+  to intercept the form submit event to check your solution. -->
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name-input">Name</label>
+    <input type="text" formControlName="name" />
+  </div>
+  <div>
+    <label for="email-input">Email</label>
+    <input type="email" formControlName="email" />
+  </div>
+  <div>
+    <label for="message-input">Message</label>
+    <textarea formControlName="message"></textarea>
+  </div>
+  <div>
+    <button>Send</button>
+  </div>
+</form>
