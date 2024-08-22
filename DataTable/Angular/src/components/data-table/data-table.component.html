@@ -1,0 +1,34 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let col of columns" id="{{col.key}}">{{col.label}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of data">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.occupation }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <div class="pagination">
+        <select aria-label="Page size" (change)="handleChange($event)">
+            <option *ngFor="let option of options" value="{{option}}">Show {{option}}</option>
+        </select>
+        <div class="pages">
+            <button [disabled]="_pageSubject.value === 1" (click)="clickPrev()">
+                Prev
+            </button>
+            <span aria-label="Page number">
+                {{text}}
+            </span>
+            <button [disabled]="_pageSubject.value === _totalPages" (click)="clickNext()">
+                Next
+            </button>
+        </div>
+    </div>
+</div>
