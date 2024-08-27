@@ -1,0 +1,102 @@
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-top: 16px;
+}
+
+.dice-form {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+}
+
+.dice-form label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.dice-form input {
+  width: 100%;
+}
+
+.dice-list {
+  background-color: #eaeaea;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+.dice {
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.dots {
+  position: relative;
+  height: 100%;
+}
+
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 100%;
+}
+
+.dot--center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dot--top-left {
+  top: 0;
+  left: 0;
+}
+
+.dot--top-right {
+  top: 0;
+  right: 0;
+}
+
+.dot--bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.dot--bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.dot--center-left {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.dot--center-right {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}
